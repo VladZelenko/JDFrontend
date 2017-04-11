@@ -14,7 +14,37 @@
 </div><!-- #content -->
 
 <footer id="colophon" class="site-footer" role="contentinfo">
+	<div class="container">
+		<div class="row">
 
+			<div class="col-sm-12 col-md-4 col-lg-4">
+				<?php if ( is_active_sidebar( 'sidebar-footer-1' ) ) : ?>
+					<div id=f ( $image_src = wp_get_attachment_image_src( $thumbnail_id, 'normal-bg' ) )"primary" role="complementary">
+						<?php dynamic_sidebar( 'sidebar-footer-1' ); ?>
+					</div>
+				<?php endif; ?>
+			</div>
+
+			<div class="col-sm-12 col-md-4 col-lg-4">
+				<?php if ( is_active_sidebar( 'sidebar-footer-2' ) ) : ?>
+					<div id=f ( $image_src = wp_get_attachment_image_src( $thumbnail_id, 'normal-bg' ) )"primary" role="complementary">
+						<?php dynamic_sidebar( 'sidebar-footer-2' ); ?>
+					</div>
+				<?php endif; ?>
+				<h2 class="title">Portfolio with Icon by Digitudes</h2>
+				<span class="copy">© Copyright 2015 @ Republic.</span>
+			</div>
+
+			<div class="col-sm-12 col-md-4 col-lg-4">
+				<?php if ( is_active_sidebar( 'sidebar-footer-3' ) ) : ?>
+					<div id=f ( $image_src = wp_get_attachment_image_src( $thumbnail_id, 'normal-bg' ) )"primary" role="complementary">
+						<?php dynamic_sidebar( 'sidebar-footer-3' ); ?>
+					</div>
+				<?php endif; ?>
+			</div>
+
+		</div>
+	</div>
 </footer><!-- #colophon -->
 </div><!-- #page -->
 

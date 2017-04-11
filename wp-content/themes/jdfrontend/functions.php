@@ -108,6 +108,30 @@ register_sidebar( array(
 	'before_title' => '<h3>',
 	'after_title' => '</h3>',
 	) );
+
+register_sidebar( array(
+	'name' => __( 'Footer widget area 1', 'jdfrontend' ),
+	'id' => 'sidebar-footer-1',
+	'description' => __( 'Footer widget area 1', 'jdfrontend' ),
+	'before_title' => '<h3>',
+	'after_title' => '</h3>',
+	) );
+
+register_sidebar( array(
+	'name' => __( 'Footer widget area 2', 'jdfrontend' ),
+	'id' => 'sidebar-footer-2',
+	'description' => __( 'Footer widget area 2', 'jdfrontend' ),
+	'before_title' => '<h3>',
+	'after_title' => '</h3>',
+	) );
+
+register_sidebar( array(
+	'name' => __( 'Footer widget area 3', 'jdfrontend' ),
+	'id' => 'sidebar-footer-3',
+	'description' => __( 'Footer widget area 3', 'jdfrontend' ),
+	'before_title' => '<h3>',
+	'after_title' => '</h3>',
+	) );
 /**
  * Enqueue scripts and styles.
  */
