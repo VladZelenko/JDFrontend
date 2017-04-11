@@ -31,8 +31,7 @@
 						<?php dynamic_sidebar( 'sidebar-footer-2' ); ?>
 					</div>
 				<?php endif; ?>
-				<h2 class="title">Portfolio with Icon by Digitudes</h2>
-				<span class="copy">© Copyright 2015 @ Republic.</span>
+				<span class="copy"><?php echo get_theme_mod('copyright'); ?>;</span>
 			</div>
 
 			<div class="col-sm-12 col-md-4 col-lg-4">

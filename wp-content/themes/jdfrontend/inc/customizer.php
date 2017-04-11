@@ -42,12 +42,56 @@ function jdfrontend_customize_register( $wp_customize ) {
 	//Background header-menu
 	$wp_customize->add_setting('bg_menu', array( 'default'=> ''));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'bg_menu', array(
-		'label'      => __( 'Header background menu', 'jdfrontend' ),
+		'label'      => __( 'Header background-color menu', 'jdfrontend' ),
 		'section'    => 'colors',
 		'settings'   => 'bg_menu',
 		'priority'	 => 3,
 		)));
 	//Background header-menu - end
+
+	//Background logo + header-menu
+	$wp_customize->add_setting('bg_header', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'bg_header', array(
+		'label'      => __( 'Header background-color', 'jdfrontend' ),
+		'section'    => 'colors',
+		'settings'   => 'bg_header',
+		'priority'	 => 4,
+		)));
+	//Background logo + header-menu - end
+
+	//Background footer
+	$wp_customize->add_setting('bg_footer', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'bg_footer', array(
+		'label'      => __( 'Footer background-color', 'jdfrontend' ),
+		'section'    => 'colors',
+		'settings'   => 'bg_header',
+		'priority'	 => 5,
+		)));
+	//Background footer - end
+
+	//copyright
+	$wp_customize->add_setting('copyright', array( 'default'=> ''));
+	$wp_customize->add_control(
+	'copyright',
+	array(
+		'label'    => __( 'Copyright', 'bg_footer' ),
+		'section'  => 'title_tagline',
+		'settings' => 'copyright',
+		'type'     => 'text',
+		));
+	//copyright - end
+
+
+	//Background footer
+	$wp_customize->add_setting('copyright_color', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'copyright_color', array(
+		'label'      => __( 'Copyright color', 'jdfrontend' ),
+		'section'    => 'colors',
+		'settings'   => 'copyright_color',
+		'priority'	 => 6,
+		)));
+	//Background footer - end
+
 	//
 	//
 	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -66,6 +110,9 @@ function mytheme_customize_css()
 		.nav-list li a {color: <?php echo get_theme_mod('header_menu_font'); ?>;}
 		.nav-list li a:hover {color: <?php echo get_theme_mod('menu_font_hover'); ?>;}
 		.top-nav {background-color: <?php echo get_theme_mod('bg_menu'); ?>;}
+		.headbox-menu {background-color: <?php echo get_theme_mod('bg_header'); ?>;}
+		.site-footer {background-color: <?php echo get_theme_mod('bg_footer'); ?>;}
+		.site-footer .copy {color: <?php echo get_theme_mod('copyright_color'); ?>;}
 	</style>
 	<?php
 }
