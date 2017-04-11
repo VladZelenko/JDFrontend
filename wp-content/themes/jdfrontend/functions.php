@@ -44,8 +44,8 @@ function jdfrontend_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', 'jdfrontend' ),
-	) );
+		'menu-1' => esc_html__( 'Header menu', 'jdfrontend' ),
+		) );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -57,13 +57,13 @@ function jdfrontend_setup() {
 		'comment-list',
 		'gallery',
 		'caption',
-	) );
+		) );
 
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'jdfrontend_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
-	) ) );
+		) ) );
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
@@ -97,30 +97,35 @@ function jdfrontend_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
-	) );
+		) );
 }
 add_action( 'widgets_init', 'jdfrontend_widgets_init' );
 
+register_sidebar( array(
+	'name' => __( 'Header widget area', 'jdfrontend' ),
+	'id' => 'sidebar-header-1',
+	'description' => __( 'Header widget area', 'jdfrontend' ),
+	'before_title' => '<h3>',
+	'after_title' => '</h3>',
+	) );
 /**
  * Enqueue scripts and styles.
  */
 function jdfrontend_scripts() {
 	wp_enqueue_style( 'jdfrontend-style', get_stylesheet_uri() );
 
+	wp_enqueue_script( 'jq', get_template_directory_uri() . '/libs/jquery/dist/jquery.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'jdfrontend-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/libs/bootstrap-sass/assets/javascripts/bootstrap.min.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'jdfrontend-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'customjs', get_template_directory_uri() . '/js/custom.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'jdfrontend_scripts' );
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.

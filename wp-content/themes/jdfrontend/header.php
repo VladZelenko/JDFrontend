@@ -12,38 +12,60 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
 
-<?php wp_head(); ?>
+	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'jdfrontend' ); ?></a>
+	<div id="page" class="site">
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'jdfrontend' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+		<header id="masthead" class="site-header" role="banner">
+			<div class="header-sidebar">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 col-md-9 col-lg-9">
+							<?php get_search_form(); ?>
+						</div>
+						<div class="col-sm-12 col-md-3 col-lg-3">
+							<?php if ( is_active_sidebar( 'sidebar-header-1' ) ) : ?>
+								<div id=f ( $image_src = wp_get_attachment_image_src( $thumbnail_id, 'normal-bg' ) )"primary" role="complementary">
+									<?php dynamic_sidebar( 'sidebar-header-1' ); ?>
+								</div>
+							<?php endif; ?>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="flexbox">
+					<h1 class="logo">
+						<a href="#">
+							<span class="accent-color">JD</span> Frontend
+						</a>
+					</h1>
+					<nav class="top-nav accent-color">
+						<a href="#" class="open-btn" id="open-btn-nav" onclick="openNav()">
+							<span class="line"></span>
+							<span class="line"></span>
+							<span class="line"></span>
+						</a>
+						<div id="nav" class="overlay">
+							<a href="#" class="close-btn" onclick="closeNav()">&times;</a>
+							<?php
+							if( has_nav_menu('menu-1') ){
+								wp_nav_menu( array(
+									'theme_location' => 'menu-1',
+									'container' => false,
+									'menu_class' => 'nav-list'
+									));
+							}
+							?>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<div id="content" class="site-content">

@@ -1,0 +1,23 @@
+{
+  "name": "JDFrontend",
+  "description": "[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)",
+  "main": "gulpfile.js",
+  "authors": [
+    "Vlad Zelenko"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/VladZelenko/JDFrontend",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "jquery": "^3.2.1",
+    "font-awesome": "^4.7.0"
+  }
+}
