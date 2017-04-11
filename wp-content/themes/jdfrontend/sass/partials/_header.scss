@@ -1,22 +1,27 @@
 //nav menu
 .close-btn {display: none;}
 .flexbox {
-	min-height: 95px;
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
 	align-items: center;
 }
 .nav-list {
+	min-height: 40px;
 	display: flex;
 	flex-flow: row nowrap;
+	align-items: center;
+	margin: 0;
 	li a{
-		padding: 5px 20px;
+		padding: 0 20px;
 		color: $secondary_font_color;
 		font: 600 18px $primary_font;
 		text-transform: uppercase;
 		cursor: pointer;
-		&:hover {text-decoration: none;}
+		&:hover {
+			text-decoration: none;
+			transition: all .4s ease-in-out;
+		}
 	}
 }
 

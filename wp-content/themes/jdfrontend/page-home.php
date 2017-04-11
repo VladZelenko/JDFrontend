@@ -34,24 +34,26 @@ get_header(); ?>
 				</div>
 			</div>
 		</div>
-		<div class="container">
-			<div class="row">
-				<ul class="portfolio-filter">
-					<li data-filter="">All</li>
-					<li data-filter="">Landing page</li>
-					<li data-filter="">Blogs</li>
-				</ul>
-				<?php
-				$query = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 100));
-				while($query->have_posts()) : $query->the_post();
-				?>
-				<div class="col-sm-12 col-md-6 col-lg-4">
-					<?php the_post_thumbnail(); ?>
-					<a href="<?php the_permalink(); ?>" class="home-post-title"><?php the_title(); ?></a>
-				</div>
-			<?php endwhile; ?>
+		<section class="posrtfolio-list">
+			<div class="container">
+				<div class="row">
+					<ul class="portfolio-filter">
+						<li data-filter="">All</li>
+						<li data-filter="">Landing page</li>
+						<li data-filter="">Blogs</li>
+					</ul>
+					<?php
+					$query = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 100));
+					while($query->have_posts()) : $query->the_post();
+					?>
+					<div class="col-sm-12 col-md-6 col-lg-4">
+						<?php the_post_thumbnail(); ?>
+						<a href="<?php the_permalink(); ?>" class="home-post-title"><?php the_title(); ?></a>
+					</div>
+				<?php endwhile; ?>
+			</div>
 		</div>
-	</div>
+	</section>
 </main><!-- #main -->
 </div><!-- #primary -->
 
