@@ -40,7 +40,7 @@
 				</div>
 			</div>
 			<div class="container">
-				<div class="flexbox">
+				<div class="flexbox headbox-menu">
 					<h1 class="logo">
 						<a href="#">
 							<span class="accent-color">JD</span> Frontend
