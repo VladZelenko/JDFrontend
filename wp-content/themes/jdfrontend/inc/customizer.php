@@ -19,11 +19,24 @@ function jdfrontend_customize_register( $wp_customize ) {
 	//+++++++++++++++++++++++++++++++++++++++++GENERAL SETTINGS THEME+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	//
 	//
+	//header
+	$wp_customize->add_section( 'header_section' , array(
+		'title'      => __( 'Header', 'jdfrontend' ),
+		'priority'   => 3,
+		));
+	//header - end
+	//footer  section
+	$wp_customize->add_section( 'footer_section' , array(
+		'title'      => __( 'Footer', 'jdfrontend' ),
+		'priority'   => 4,
+		));
+	//footer  section - end
+
 	//header menu font color
 	$wp_customize->add_setting('header_menu_font', array( 'default'=> ''));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_menu_font', array(
 		'label'      => __( 'Menu font color', 'jdfrontend' ),
-		'section'    => 'colors',
+		'section'    => 'header_section',
 		'settings'   => 'header_menu_font',
 		'priority'	 => 1,
 		)));
@@ -33,7 +46,7 @@ function jdfrontend_customize_register( $wp_customize ) {
 	$wp_customize->add_setting('menu_font_hover', array( 'default'=> ''));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'menu_font_hover', array(
 		'label'      => __( 'Menu font color hover', 'jdfrontend' ),
-		'section'    => 'colors',
+		'section'    => 'header_section',
 		'settings'   => 'menu_font_hover',
 		'priority'	 => 2,
 		)));
@@ -43,7 +56,7 @@ function jdfrontend_customize_register( $wp_customize ) {
 	$wp_customize->add_setting('bg_menu', array( 'default'=> ''));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'bg_menu', array(
 		'label'      => __( 'Header background-color menu', 'jdfrontend' ),
-		'section'    => 'colors',
+		'section'    => 'header_section',
 		'settings'   => 'bg_menu',
 		'priority'	 => 3,
 		)));
@@ -53,7 +66,7 @@ function jdfrontend_customize_register( $wp_customize ) {
 	$wp_customize->add_setting('bg_header', array( 'default'=> ''));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'bg_header', array(
 		'label'      => __( 'Header background-color', 'jdfrontend' ),
-		'section'    => 'colors',
+		'section'    => 'header_section',
 		'settings'   => 'bg_header',
 		'priority'	 => 4,
 		)));
@@ -63,7 +76,7 @@ function jdfrontend_customize_register( $wp_customize ) {
 	$wp_customize->add_setting('bg_footer', array( 'default'=> ''));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'bg_footer', array(
 		'label'      => __( 'Footer background-color', 'jdfrontend' ),
-		'section'    => 'colors',
+		'section'    => 'footer_section',
 		'settings'   => 'bg_header',
 		'priority'	 => 5,
 		)));
@@ -82,15 +95,15 @@ function jdfrontend_customize_register( $wp_customize ) {
 	//copyright - end
 
 
-	//Background footer
+	//copyright color
 	$wp_customize->add_setting('copyright_color', array( 'default'=> ''));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'copyright_color', array(
 		'label'      => __( 'Copyright color', 'jdfrontend' ),
-		'section'    => 'colors',
+		'section'    => 'footer_section',
 		'settings'   => 'copyright_color',
 		'priority'	 => 6,
 		)));
-	//Background footer - end
+	//copyright color - end
 
 	//accent color
 	$wp_customize->add_setting('accent_color', array( 'default'=> ''));
@@ -113,6 +126,27 @@ function jdfrontend_customize_register( $wp_customize ) {
 			'type'     => 'textarea',
 			));
 	//header title - end
+
+	//header title color
+	$wp_customize->add_setting('header_title_color', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_title_color', array(
+		'label'      => __( 'Header title color', 'jdfrontend' ),
+		'section'    => 'header_section',
+		'settings'   => 'header_title_color',
+		'priority'	 => 6,
+		)));
+	//header  title color - end
+
+
+	//Background header-sidebar
+	$wp_customize->add_setting('bg_header_sidebar', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'bg_header_sidebar', array(
+		'label'      => __( 'Background header sidebar', 'jdfrontend' ),
+		'section'    => 'header_section',
+		'settings'   => 'bg_header_sidebar',
+		'priority'	 => 7,
+		)));
+	//Background header-sidebar - end
 	//
 	//
 	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -162,7 +196,9 @@ function mytheme_customize_css()
 		.headbox-menu {background-color: <?php echo get_theme_mod('bg_header'); ?>;}
 		.site-footer {background-color: <?php echo get_theme_mod('bg_footer'); ?>;}
 		.site-footer .copy {color: <?php echo get_theme_mod('copyright_color'); ?>;}
+		.header-title {color: <?php echo get_theme_mod('header_title_color'); ?>;}
 		.contacts-section {background-color: <?php echo get_theme_mod('contacts_bg'); ?>;}
+		.header-sidebar {background-color: <?php echo get_theme_mod('bg_header_sidebar'); ?>;}
 	</style>
 	<?php
 }
