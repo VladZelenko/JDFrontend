@@ -8419,10 +8419,23 @@ button.close {
         -ms-flex-pack: end;
             justify-content: flex-end; }
 
-.brief-info .contact-contentbox {
-  padding: 30px 0; }
-  .brief-info .contact-contentbox i {
-    color: #bebebe; }
+.brief-info {
+  margin-bottom: 100px; }
+  .brief-info .contact-contentbox {
+    font: 300 14px/31px "Roboto", sans-serif;
+    padding: 40px 0; }
+    .brief-info .contact-contentbox i {
+      color: #bebebe; }
+  .brief-info .button-box {
+    min-height: 130px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
 
 .site-footer {
   width: 100%;
@@ -8464,7 +8477,7 @@ button.close {
     text-decoration: none; }
 
 #searchform input {
-  width: 300px;
+  width: 260px;
   height: 30px;
   background: none;
   border: none; }

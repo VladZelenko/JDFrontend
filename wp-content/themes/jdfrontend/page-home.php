@@ -23,14 +23,14 @@ get_header(); ?>
 		<section class="brief-info">
 			<div class="container">
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-					<div class="row">
+					<div class="row contacts-section">
 						<div class="col-md-3 col-lg-3 contact-imgbox">
 							<?php the_post_thumbnail(); ?>
 						</div>
 						<div class="col-md-7 col-lg-7 contact-contentbox">
 							<?php the_content(); ?>
 						</div>
-						<div class="col-md-2 col-lg-2">
+						<div class="col-md-2 col-lg-2 button-box">
 							<a href="#" class="contact-btn accent-color">Contact Me</a>
 						</div>
 					</div>

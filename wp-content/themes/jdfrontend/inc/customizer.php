@@ -113,11 +113,26 @@ function jdfrontend_customize_register( $wp_customize ) {
 		'title' => 'Home page',
 		'priority' => 1,
 		));
-	$wp_customize->add_section( 'content_section' , array(
-		'title'      => __( 'Title blog page', 'businessplus' ),
-		'priority'   => 30,
-		'panel'			 => 'blog_panel',
+	$wp_customize->add_section( 'home_contacts' , array(
+		'title'      => __( 'Contacts', 'jdfrontend' ),
+		'priority'   => 2,
+		'panel'			 => 'home_panel',
 		));
+	$wp_customize->add_section( 'buttons' , array(
+		'title'      => __( 'Buttons', 'jdfrontend' ),
+		'priority'   => 3,
+		'panel'			 => 'home_panel',
+		));
+
+	//Background contacts section on home page
+	$wp_customize->add_setting('contacts_bg', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'contacts_bg', array(
+		'label'      => __( 'Background-color', 'jdfrontend' ),
+		'section'    => 'home_contacts',
+		'settings'   => 'contacts_bg',
+		'priority'	 => 1,
+		)));
+	//Background contacts section on home page - end
 	//
 	//
 	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -136,7 +151,7 @@ function mytheme_customize_css()
 		.headbox-menu {background-color: <?php echo get_theme_mod('bg_header'); ?>;}
 		.site-footer {background-color: <?php echo get_theme_mod('bg_footer'); ?>;}
 		.site-footer .copy {color: <?php echo get_theme_mod('copyright_color'); ?>;}
-
+		.contacts-section {background-color: <?php echo get_theme_mod('contacts_bg'); ?>;}
 	</style>
 	<?php
 }
