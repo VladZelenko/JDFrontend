@@ -8369,12 +8369,13 @@ button.close {
       -ms-flex-align: center;
           align-items: center; }
   .headbox-menu a:hover, .headbox-menu a:focus {
-    text-decoration: none; }
+    text-decoration: none;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out; }
   .headbox-menu .logo-part-1 {
     margin-right: 15px;
     display: block;
     width: 50px;
-    color: #ffffff;
     font: 400 22px/50px "Roboto", sans-serif;
     text-align: center;
     float: left; }
@@ -8386,7 +8387,6 @@ button.close {
     font: 700 28px "Roboto", sans-serif; }
 
 .nav-list {
-  min-height: 40px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8396,15 +8396,11 @@ button.close {
   -webkit-flex-flow: row nowrap;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin: 0; }
   .nav-list li a {
     padding: 0 20px;
     color: #313131;
-    font: 600 18px "Roboto", sans-serif;
+    font: 600 18px/40px "Roboto", sans-serif;
     text-transform: uppercase;
     cursor: pointer; }
     .nav-list li a:hover {
@@ -8445,7 +8441,8 @@ button.close {
   margin-bottom: 100px; }
   .brief-info .contact-contentbox {
     font: 300 14px/31px "Roboto", sans-serif;
-    padding: 40px 0; }
+    padding: 40px 0;
+    color: #424242; }
     .brief-info .contact-contentbox i {
       color: #bebebe; }
   .brief-info .button-box {

@@ -157,6 +157,32 @@ function contacts_post_type() {
     register_post_type( 'home-contact', $args );
 }
 add_action( 'init', 'contacts_post_type' );
+
+
+function about_post_type() {
+    $args = array(
+      'label' => 'About me',
+      'public' => true,
+      'show_ui' => true,
+      'capability_type' => 'post',
+      'hierarchical' => false,
+      'rewrite' => array('slug' => 'about-me'),
+      'query_var' => true,
+      'supports' => array(
+        'title',
+        'editor',
+        'excerpt',
+        'trackbacks',
+        'custom-fields',
+        'comments',
+        'revisions',
+        'thumbnail',
+        'author',
+        'page-attributes',)
+    );
+    register_post_type( 'about-me', $args );
+}
+add_action( 'init', 'about_post_type' );
 /**
  * Enqueue scripts and styles.
  */

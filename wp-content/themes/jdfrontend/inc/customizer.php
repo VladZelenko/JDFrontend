@@ -52,13 +52,23 @@ function jdfrontend_customize_register( $wp_customize ) {
 		)));
 	//Header menu font color hover - end
 
+	//Current item header menu
+	$wp_customize->add_setting('current_item', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'current_item', array(
+		'label'      => __( 'Current item menu', 'jdfrontend' ),
+		'section'    => 'header_section',
+		'settings'   => 'current_item',
+		'priority'	 => 3,
+		)));
+	//Current item header menu - end
+
 	//Background header-menu
 	$wp_customize->add_setting('bg_menu', array( 'default'=> ''));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'bg_menu', array(
 		'label'      => __( 'Header background-color menu', 'jdfrontend' ),
 		'section'    => 'header_section',
 		'settings'   => 'bg_menu',
-		'priority'	 => 3,
+		'priority'	 => 4,
 		)));
 	//Background header-menu - end
 
@@ -68,7 +78,7 @@ function jdfrontend_customize_register( $wp_customize ) {
 		'label'      => __( 'Header background-color', 'jdfrontend' ),
 		'section'    => 'header_section',
 		'settings'   => 'bg_header',
-		'priority'	 => 4,
+		'priority'	 => 5,
 		)));
 	//Background logo + header-menu - end
 
@@ -78,7 +88,7 @@ function jdfrontend_customize_register( $wp_customize ) {
 		'label'      => __( 'Footer background-color', 'jdfrontend' ),
 		'section'    => 'footer_section',
 		'settings'   => 'bg_header',
-		'priority'	 => 5,
+		'priority'	 => 6,
 		)));
 	//Background footer - end
 
@@ -147,6 +157,36 @@ function jdfrontend_customize_register( $wp_customize ) {
 		'priority'	 => 7,
 		)));
 	//Background header-sidebar - end
+
+	//Background logotype
+	$wp_customize->add_setting('bg_logotype', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'bg_logotype', array(
+		'label'      => __( 'Background logotype', 'jdfrontend' ),
+		'section'    => 'header_section',
+		'settings'   => 'bg_logotype',
+		'priority'	 => 8,
+		)));
+	//Background logotype - end
+
+	//Logotype font color
+	$wp_customize->add_setting('logotype_font_color', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'logotype_font_color', array(
+		'label'      => __( 'Logotype font color', 'jdfrontend' ),
+		'section'    => 'header_section',
+		'settings'   => 'logotype_font_color',
+		'priority'	 => 9,
+		)));
+	//Logotype font color - end
+
+	//Logotype font color
+	$wp_customize->add_setting('logo_font_hover', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'logo_font_hover', array(
+		'label'      => __( 'Logotype font color hover', 'jdfrontend' ),
+		'section'    => 'header_section',
+		'settings'   => 'logo_font_hover',
+		'priority'	 => 9,
+		)));
+	//Logotype font color hover - end
 	//
 	//
 	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -197,8 +237,12 @@ function mytheme_customize_css()
 		.site-footer {background-color: <?php echo get_theme_mod('bg_footer'); ?>;}
 		.site-footer .copy {color: <?php echo get_theme_mod('copyright_color'); ?>;}
 		.header-title {color: <?php echo get_theme_mod('header_title_color'); ?>;}
+		.logo a {color: <?php echo get_theme_mod('logotype_font_color'); ?>;}
+		.logo a:hover, .logo a:focus {color: <?php echo get_theme_mod('logo_font_hover'); ?>;}
+		.current-menu-item {color: <?php echo get_theme_mod('current_item'); ?>;}
 		.contacts-section {background-color: <?php echo get_theme_mod('contacts_bg'); ?>;}
 		.header-sidebar {background-color: <?php echo get_theme_mod('bg_header_sidebar'); ?>;}
+		.logo-part-1 {background-color: <?php echo get_theme_mod('bg_logotype'); ?>;}
 	</style>
 	<?php
 }
