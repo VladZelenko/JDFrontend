@@ -8368,6 +8368,22 @@ button.close {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
+  .headbox-menu a:hover, .headbox-menu a:focus {
+    text-decoration: none; }
+  .headbox-menu .logo-part-1 {
+    margin-right: 15px;
+    display: block;
+    width: 50px;
+    color: #ffffff;
+    font: 400 22px/50px "Roboto", sans-serif;
+    text-align: center;
+    float: left; }
+  .headbox-menu .logo-part-2 {
+    display: block;
+    height: 20px;
+    font: 400 18px "Roboto", sans-serif; }
+  .headbox-menu .logo-part-3 {
+    font: 700 28px "Roboto", sans-serif; }
 
 .nav-list {
   min-height: 40px;

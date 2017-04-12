@@ -45,8 +45,11 @@
 			<div class="container">
 				<div class="flexbox headbox-menu">
 					<h1 class="logo">
-						<a href="#">
-							<span class="accent-color">JD</span> Frontend
+						<a href="<?php the_permalink(); ?>">
+							<span class="accent-color logo-part-1">JD</span>
+							<span class="logo-part-2">Frontend
+								<span class="logo-part-3">Portfolio</span>
+							</span>
 						</a>
 					</h1>
 					<nav class="top-nav accent-color">
