@@ -55,8 +55,7 @@ get_header(); ?>
 				while($query->have_posts()) : $query->the_post();
 				?>
 				<div class="col-sm-12 col-md-6 col-lg-4">
-					<?php the_post_thumbnail(); ?>
-					<a href="<?php the_permalink(); ?>" class="home-post-title"><?php the_title(); ?></a>
+					<a href="<?php the_permalink(); ?>" class="home-post-portfolio"><?php the_post_thumbnail(); ?></a>
 				</div>
 			<?php endwhile; ?>
 		</div>

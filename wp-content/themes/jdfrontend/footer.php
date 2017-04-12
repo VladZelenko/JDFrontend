@@ -31,7 +31,7 @@
 						<?php dynamic_sidebar( 'sidebar-footer-2' ); ?>
 					</div>
 				<?php endif; ?>
-				<span class="copy"><?php echo get_theme_mod('copyright'); ?>;</span>
+				<span class="copy"><?php echo get_theme_mod('copyright'); ?></span>
 			</div>
 
 			<div class="col-sm-12 col-md-4 col-lg-4">

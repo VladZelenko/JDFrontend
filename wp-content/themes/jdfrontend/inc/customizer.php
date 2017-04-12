@@ -74,7 +74,7 @@ function jdfrontend_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'copyright',
 		array(
-			'label'    => __( 'Copyright', 'bg_footer' ),
+			'label'    => __( 'Copyright', 'jdfrontend' ),
 			'section'  => 'title_tagline',
 			'settings' => 'copyright',
 			'type'     => 'text',
@@ -102,6 +102,17 @@ function jdfrontend_customize_register( $wp_customize ) {
 		)));
 	//accent color - end
 
+	//header title
+	$wp_customize->add_setting('head_title', array( 'default'=> ''));
+	$wp_customize->add_control(
+		'head_title',
+		array(
+			'label'    => __( 'Header title', 'jdfrontend' ),
+			'section'  => 'title_tagline',
+			'settings' => 'head_title',
+			'type'     => 'textarea',
+			));
+	//header title - end
 	//
 	//
 	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

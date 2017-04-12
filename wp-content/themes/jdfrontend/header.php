@@ -26,8 +26,9 @@
 			<div class="header-sidebar">
 				<div class="container">
 					<div class="row">
-					<div class="col-sm-12 col-md-5 col-lg-5">
-					</div>
+						<div class="col-sm-12 col-md-5 col-lg-5">
+							<h2 class="header-title"><?php echo get_theme_mod('head_title'); ?></h2>
+						</div>
 						<div class="col-sm-12 col-md-5 col-lg-5 flexbox">
 							<?php get_search_form(); ?>
 						</div>
