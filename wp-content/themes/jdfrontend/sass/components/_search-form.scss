@@ -1,3 +1,13 @@
-#searchsubmit {
-	
+#searchform {
+	input {
+		width: 300px;
+		height: 30px;
+		background: none;
+		border: none;
+	}
+	#searchsubmit {
+		background: none;
+		border: none;
+		.fa {font-size: 20px;}
+	}
 }

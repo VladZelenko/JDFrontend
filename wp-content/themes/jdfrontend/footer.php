@@ -25,7 +25,7 @@
 				<?php endif; ?>
 			</div>
 
-			<div class="col-sm-12 col-md-4 col-lg-4">
+			<div class="col-sm-12 col-md-4 col-lg-4 flexbox">
 				<?php if ( is_active_sidebar( 'sidebar-footer-2' ) ) : ?>
 					<div id=f ( $image_src = wp_get_attachment_image_src( $thumbnail_id, 'normal-bg' ) )"primary" role="complementary">
 						<?php dynamic_sidebar( 'sidebar-footer-2' ); ?>

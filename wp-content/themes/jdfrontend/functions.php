@@ -132,6 +132,31 @@ register_sidebar( array(
 	'before_title' => '<h3>',
 	'after_title' => '</h3>',
 	) );
+//Page home - contact
+function contacts_post_type() {
+    $args = array(
+      'label' => 'Home contact',
+      'public' => true,
+      'show_ui' => true,
+      'capability_type' => 'post',
+      'hierarchical' => false,
+      'rewrite' => array('slug' => 'home-contact'),
+      'query_var' => true,
+      'supports' => array(
+        'title',
+        'editor',
+        'excerpt',
+        'trackbacks',
+        'custom-fields',
+        'comments',
+        'revisions',
+        'thumbnail',
+        'author',
+        'page-attributes',)
+    );
+    register_post_type( 'home-contact', $args );
+}
+add_action( 'init', 'contacts_post_type' );
 /**
  * Enqueue scripts and styles.
  */

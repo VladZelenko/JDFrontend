@@ -8409,6 +8409,15 @@ button.close {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
+  .header-sidebar .flexbox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
 
 .site-footer {
   width: 100%;
@@ -8422,6 +8431,32 @@ button.close {
       -ms-flex-align: center;
           align-items: center;
   text-align: center; }
+  .site-footer .flexbox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+
+#searchform input {
+  width: 300px;
+  height: 30px;
+  background: none;
+  border: none; }
+
+#searchform #searchsubmit {
+  background: none;
+  border: none; }
+  #searchform #searchsubmit .fa {
+    font-size: 20px; }
 
 @media only screen and (max-width: 1050px) {
   .overlay {

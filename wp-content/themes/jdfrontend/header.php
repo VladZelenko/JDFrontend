@@ -26,10 +26,12 @@
 			<div class="header-sidebar">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-12 col-md-9 col-lg-9">
+					<div class="col-sm-12 col-md-5 col-lg-5">
+					</div>
+						<div class="col-sm-12 col-md-5 col-lg-5 flexbox">
 							<?php get_search_form(); ?>
 						</div>
-						<div class="col-sm-12 col-md-3 col-lg-3">
+						<div class="col-sm-12 col-md-2 col-lg-2 flexbox">
 							<?php if ( is_active_sidebar( 'sidebar-header-1' ) ) : ?>
 								<div id=f ( $image_src = wp_get_attachment_image_src( $thumbnail_id, 'normal-bg' ) )"primary" role="complementary">
 									<?php dynamic_sidebar( 'sidebar-header-1' ); ?>
