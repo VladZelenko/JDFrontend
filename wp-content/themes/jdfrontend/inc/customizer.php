@@ -72,13 +72,13 @@ function jdfrontend_customize_register( $wp_customize ) {
 	//copyright
 	$wp_customize->add_setting('copyright', array( 'default'=> ''));
 	$wp_customize->add_control(
-	'copyright',
-	array(
-		'label'    => __( 'Copyright', 'bg_footer' ),
-		'section'  => 'title_tagline',
-		'settings' => 'copyright',
-		'type'     => 'text',
-		));
+		'copyright',
+		array(
+			'label'    => __( 'Copyright', 'bg_footer' ),
+			'section'  => 'title_tagline',
+			'settings' => 'copyright',
+			'type'     => 'text',
+			));
 	//copyright - end
 
 
@@ -92,13 +92,35 @@ function jdfrontend_customize_register( $wp_customize ) {
 		)));
 	//Background footer - end
 
+	//accent color
+	$wp_customize->add_setting('accent_color', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'accent_color', array(
+		'label'      => __( 'Accent color', 'jdfrontend' ),
+		'section'    => 'colors',
+		'settings'   => 'accent_color',
+		'priority'	 => 6,
+		)));
+	//accent color - end
+
 	//
 	//
 	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-	$wp_customize->add_panel( 'blog_panel', array(
-		'title' => 'Blog post page', //название панели
-		'priority' => 10,
+
+		//+++++++++++++++++++++++++++++++++++++++++HOME PAGE++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	//
+	//
+	$wp_customize->add_panel( 'home_panel', array(
+		'title' => 'Home page',
+		'priority' => 1,
 		));
+	$wp_customize->add_section( 'content_section' , array(
+		'title'      => __( 'Title blog page', 'businessplus' ),
+		'priority'   => 30,
+		'panel'			 => 'blog_panel',
+		));
+	//
+	//
+	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 }
 add_action( 'customize_register', 'jdfrontend_customize_register' );
@@ -107,12 +129,14 @@ function mytheme_customize_css()
 {
 	?>
 	<style type="text/css">
+		.accent-color {background-color: <?php echo get_theme_mod('accent_color'); ?>;}
 		.nav-list li a {color: <?php echo get_theme_mod('header_menu_font'); ?>;}
 		.nav-list li a:hover {color: <?php echo get_theme_mod('menu_font_hover'); ?>;}
 		.top-nav {background-color: <?php echo get_theme_mod('bg_menu'); ?>;}
 		.headbox-menu {background-color: <?php echo get_theme_mod('bg_header'); ?>;}
 		.site-footer {background-color: <?php echo get_theme_mod('bg_footer'); ?>;}
 		.site-footer .copy {color: <?php echo get_theme_mod('copyright_color'); ?>;}
+
 	</style>
 	<?php
 }

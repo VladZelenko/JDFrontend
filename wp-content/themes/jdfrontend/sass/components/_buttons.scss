@@ -1,0 +1,12 @@
+.contact-btn {
+	display: block;
+	width: 170px;
+	height: 45px;
+	font: 300 14px/45px $primary_font;
+	text-align: center;
+	text-transform: uppercase;
+	&:hover, &:focus {
+		transition: all .4s ease-in-out;
+		text-decoration: none;
+	}
+}

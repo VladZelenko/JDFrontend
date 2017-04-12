@@ -8419,6 +8419,11 @@ button.close {
         -ms-flex-pack: end;
             justify-content: flex-end; }
 
+.brief-info .contact-contentbox {
+  padding: 30px 0; }
+  .brief-info .contact-contentbox i {
+    color: #bebebe; }
+
 .site-footer {
   width: 100%;
   min-height: 220px;
@@ -8445,6 +8450,18 @@ button.close {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
+
+.contact-btn {
+  display: block;
+  width: 170px;
+  height: 45px;
+  font: 300 14px/45px "Roboto", sans-serif;
+  text-align: center;
+  text-transform: uppercase; }
+  .contact-btn:hover, .contact-btn:focus {
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    text-decoration: none; }
 
 #searchform input {
   width: 300px;
