@@ -183,6 +183,32 @@ function about_post_type() {
     register_post_type( 'about-me', $args );
 }
 add_action( 'init', 'about_post_type' );
+
+
+function education_post_type() {
+    $args = array(
+      'label' => 'My education',
+      'public' => true,
+      'show_ui' => true,
+      'capability_type' => 'post',
+      'hierarchical' => false,
+      'rewrite' => array('slug' => 'education'),
+      'query_var' => true,
+      'supports' => array(
+        'title',
+        'editor',
+        'excerpt',
+        'trackbacks',
+        'custom-fields',
+        'comments',
+        'revisions',
+        'thumbnail',
+        'author',
+        'page-attributes',)
+    );
+    register_post_type( 'education', $args );
+}
+add_action( 'init', 'education_post_type' );
 /**
  * Enqueue scripts and styles.
  */
