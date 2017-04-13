@@ -6,6 +6,8 @@
 		min-height: 45px;
 		border: 1px solid #e3e3e3;
 		background: none;
+		font: 300 14px $primary_font;
+		color: $secondary_font_color;
 	}
 	textarea {
 		padding-top: 10px;
@@ -31,5 +33,12 @@
 			height: 2px;
 			background-color: #424242;
 		}
+	}
+	.fa {padding-right: 10px;}
+	a {font: 300 14px $primary_font;}
+}
+.contact-info {
+	ul li {
+		margin-bottom: 10px;
 	}
 }

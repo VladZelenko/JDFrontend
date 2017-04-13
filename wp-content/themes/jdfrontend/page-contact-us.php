@@ -27,12 +27,12 @@ get_header(); ?>
 					<ul>
 						<li>
 							<a href="mailto:<?php echo get_theme_mod('email'); ?>">
-								<i class="fa fa-envelope-o" aria-hidden="true"></i><?php echo get_theme_mod('email'); ?>
+								<i class="fa fa-paper-plane" aria-hidden="true"></i><?php echo get_theme_mod('email'); ?>
 							</a>
 						</li>
 						<li>
 							<a href="tel:<?php echo get_theme_mod('phone'); ?>">
-								<i class="fa fa-mobile" aria-hidden="true"></i><?php echo get_theme_mod('phone'); ?>
+								<i class="fa fa-phone-square" aria-hidden="true"></i></i><?php echo get_theme_mod('phone'); ?>
 							</a>
 						</li>
 						<li>

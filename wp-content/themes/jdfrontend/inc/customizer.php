@@ -342,6 +342,36 @@ function jdfrontend_customize_register( $wp_customize ) {
 			'type'     => 'text',
 			));
 	//Site  - end
+
+	//info font color
+	$wp_customize->add_setting('icon_color', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'icon_color', array(
+		'label'      => __( 'Icon color', 'jdfrontend' ),
+		'section'    => 'contact_section',
+		'settings'   => 'icon_color',
+		)));
+	//info font color - end
+
+	//Icon font-size
+		$wp_customize->add_setting('icon_font_size', array( 'default'=> ''));
+	$wp_customize->add_control(
+		'icon_font_size',
+		array(
+			'label'    => __( 'Icon font-size', 'jdfrontend' ),
+			'section'  => 'contact_section',
+			'settings' => 'icon_font_size',
+			'type'     => 'number',
+			));
+	//Icon font-size - end
+
+	//Info font color
+	$wp_customize->add_setting('info_color', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'info_color', array(
+		'label'      => __( 'Info font color', 'jdfrontend' ),
+		'section'    => 'contact_section',
+		'settings'   => 'info_color',
+		)));
+	//Info font color - end
 	//
 	//
 	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -368,6 +398,11 @@ function mytheme_customize_css()
 		.logo-part-1 {background-color: <?php echo get_theme_mod('bg_logotype'); ?>;}
 		.title {color: <?php echo get_theme_mod('title_font_color'); ?>;}
 		p {color: <?php echo get_theme_mod('p_font_color'); ?>;}
+		.contact .contact-info .fa {
+			color: <?php echo get_theme_mod('icon_color'); ?>;
+			font-size: <?php echo get_theme_mod('icon_font_size') . 'px'; ?>;
+		}
+		.contact .contact-info a {color: <?php echo get_theme_mod('info_color'); ?>;}
 	</style>
 	<?php
 }

@@ -8399,7 +8399,7 @@ button.close {
   margin: 0; }
   .nav-list li a {
     padding: 0 20px;
-    color: #313131;
+    color: #999999;
     font: 600 18px/40px "Roboto", sans-serif;
     text-transform: uppercase;
     cursor: pointer; }
@@ -8493,7 +8493,9 @@ button.close {
   width: 100%;
   min-height: 45px;
   border: 1px solid #e3e3e3;
-  background: none; }
+  background: none;
+  font: 300 14px "Roboto", sans-serif;
+  color: #999999; }
 
 .wpcf7-form-control-wrap textarea {
   padding-top: 10px;
@@ -8516,6 +8518,15 @@ button.close {
     width: 30px;
     height: 2px;
     background-color: #424242; }
+
+.contact .fa {
+  padding-right: 10px; }
+
+.contact a {
+  font: 300 14px "Roboto", sans-serif; }
+
+.contact-info ul li {
+  margin-bottom: 10px; }
 
 .site-footer {
   width: 100%;
@@ -8560,7 +8571,7 @@ button.close {
   width: 260px;
   height: 30px;
   background: none;
-  border: 1px solid #bebebe; }
+  border: 1px solid #e3e3e3; }
 
 #searchform #searchsubmit {
   background: none;
