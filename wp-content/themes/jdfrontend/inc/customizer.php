@@ -249,7 +249,7 @@ function jdfrontend_customize_register( $wp_customize ) {
 		'title'      => __( 'About page', 'jdfrontend' ),
 		'priority'   => 1,
 		));
-	//Title 1 title
+	//Title 1
 	$wp_customize->add_setting('head_title_1', array( 'default'=> ''));
 	$wp_customize->add_control(
 		'head_title_1',
@@ -259,9 +259,9 @@ function jdfrontend_customize_register( $wp_customize ) {
 			'settings' => 'head_title_1',
 			'type'     => 'textarea',
 			));
-	//Title 1 title - end
+	//Title 1 - end
 
-	//Title 2 title
+	//Title 2
 	$wp_customize->add_setting('head_title_2', array( 'default'=> ''));
 	$wp_customize->add_control(
 		'head_title_2',
@@ -271,7 +271,65 @@ function jdfrontend_customize_register( $wp_customize ) {
 			'settings' => 'head_title_2',
 			'type'     => 'textarea',
 			));
-	//Title 2 title - end
+	//Title 2 - end
+	//
+	//
+	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	//+++++++++++++++++++++++++++++++++++++++++CONTACT PAGE+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	//
+	//
+	$wp_customize->add_section( 'contact_section' , array(
+		'title'      => __( 'Contact page', 'jdfrontend' ),
+		'priority'   => 1,
+		));
+	//Title 1
+	$wp_customize->add_setting('contact_title', array( 'default'=> ''));
+	$wp_customize->add_control(
+		'contact_title',
+		array(
+			'label'    => __( 'Title', 'jdfrontend' ),
+			'section'  => 'contact_section',
+			'settings' => 'contact_title',
+			'type'     => 'textarea',
+			));
+	//Title 1  - end
+
+	//Email
+	$wp_customize->add_setting('email', array( 'default'=> ''));
+	$wp_customize->add_control(
+		'email',
+		array(
+			'label'    => __( 'Email', 'jdfrontend' ),
+			'section'  => 'contact_section',
+			'settings' => 'email',
+			'type'     => 'text',
+			));
+	//Email  - end
+
+	//Phone
+	$wp_customize->add_setting('phone', array( 'default'=> ''));
+	$wp_customize->add_control(
+		'phone',
+		array(
+			'label'    => __( 'Phone', 'jdfrontend' ),
+			'section'  => 'contact_section',
+			'settings' => 'phone',
+			'type'     => 'text',
+			));
+	//Phone  - end
+
+	//Site
+	$wp_customize->add_setting('site', array( 'default'=> ''));
+	$wp_customize->add_control(
+		'site',
+		array(
+			'label'    => __( 'Site', 'jdfrontend' ),
+			'section'  => 'contact_section',
+			'settings' => 'site',
+			'type'     => 'text',
+			));
+	//Site  - end
 	//
 	//
 	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
