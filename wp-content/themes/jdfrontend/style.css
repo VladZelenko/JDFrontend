@@ -8437,30 +8437,32 @@ button.close {
   .header-sidebar .header-title {
     font: 300 14px "Roboto", sans-serif; }
 
-.about-me {
+.about-me, .skills, .education {
   text-align: center; }
-  .about-me .title {
+  .about-me h2.title, .skills h2.title, .education h2.title {
     font: 700 22px "Roboto", sans-serif;
     text-transform: uppercase; }
-    .about-me .title:after {
+    .about-me h2.title:after, .skills h2.title:after, .education h2.title:after {
       content: '';
       display: block;
       width: 30px;
       height: 3px;
       background-color: #999999;
       margin: 15px auto 30px auto; }
-  .about-me p {
+  .about-me p, .skills p, .education p {
     font: 300 14px/24px "Roboto", sans-serif;
     margin-bottom: 95px; }
 
-.education {
-  text-align: center; }
-  .education .title {
-    margin-bottom: 25px;
-    font: 400 16px "Roboto", sans-serif;
-    text-transform: uppercase; }
-  .education p {
-    font: 400 16px/20px "Roboto", sans-serif; }
+.education h3.title {
+  margin: 0 0 25px 0;
+  font: 400 16px "Roboto", sans-serif;
+  text-transform: uppercase; }
+
+.education p {
+  font: 400 16px/20px "Roboto", sans-serif; }
+
+.skills .skillbox {
+  margin: 15px 0; }
 
 .brief-info {
   margin-bottom: 100px; }

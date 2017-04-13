@@ -211,7 +211,7 @@ function jdfrontend_customize_register( $wp_customize ) {
 	//
 	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-		//+++++++++++++++++++++++++++++++++++++++++HOME PAGE++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	//+++++++++++++++++++++++++++++++++++++++++HOME PAGE++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	//
 	//
 	$wp_customize->add_panel( 'home_panel', array(
@@ -242,6 +242,39 @@ function jdfrontend_customize_register( $wp_customize ) {
 	//
 	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+	//+++++++++++++++++++++++++++++++++++++++++ABOUT PAGE+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	//
+	//
+	$wp_customize->add_section( 'about_section' , array(
+		'title'      => __( 'About page', 'jdfrontend' ),
+		'priority'   => 1,
+		));
+	//Title 1 title
+	$wp_customize->add_setting('head_title_1', array( 'default'=> ''));
+	$wp_customize->add_control(
+		'head_title_1',
+		array(
+			'label'    => __( 'Title 1', 'jdfrontend' ),
+			'section'  => 'about_section',
+			'settings' => 'head_title_1',
+			'type'     => 'textarea',
+			));
+	//Title 1 title - end
+
+	//Title 2 title
+	$wp_customize->add_setting('head_title_2', array( 'default'=> ''));
+	$wp_customize->add_control(
+		'head_title_2',
+		array(
+			'label'    => __( 'Title 2', 'jdfrontend' ),
+			'section'  => 'about_section',
+			'settings' => 'head_title_2',
+			'type'     => 'textarea',
+			));
+	//Title 2 title - end
+	//
+	//
+	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 }
 add_action( 'customize_register', 'jdfrontend_customize_register' );
 
