@@ -214,21 +214,10 @@ function jdfrontend_customize_register( $wp_customize ) {
 	//+++++++++++++++++++++++++++++++++++++++++HOME PAGE++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	//
 	//
-	$wp_customize->add_panel( 'home_panel', array(
-		'title' => 'Home page',
-		'priority' => 1,
-		));
 	$wp_customize->add_section( 'home_contacts' , array(
-		'title'      => __( 'Contacts', 'jdfrontend' ),
+		'title'      => __( 'Home page', 'jdfrontend' ),
 		'priority'   => 2,
-		'panel'			 => 'home_panel',
 		));
-	$wp_customize->add_section( 'buttons' , array(
-		'title'      => __( 'Buttons', 'jdfrontend' ),
-		'priority'   => 3,
-		'panel'			 => 'home_panel',
-		));
-
 	//Background contacts section on home page
 	$wp_customize->add_setting('contacts_bg', array( 'default'=> ''));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'contacts_bg', array(
