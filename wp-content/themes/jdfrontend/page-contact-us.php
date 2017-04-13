@@ -19,6 +19,7 @@ get_header(); ?>
 		<div class="container contact">
 			<div class="row">
 				<div class="col-sm-12 col-md-6 col-lg-6 contact-form">
+					<h2 class="title"><?php echo get_theme_mod('contact_title_2'); ?></h2>
 					<?php echo do_shortcode('[contact-form-7 id="112" title="Contact form 1"]'); ?>
 				</div>
 				<div class="col-sm-12 col-md-6 col-lg-6 contact-info">

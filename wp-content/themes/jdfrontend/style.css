@@ -8487,6 +8487,36 @@ button.close {
   display: block;
   margin-bottom: 30px; }
 
+.wpcf7-form-control-wrap input, .wpcf7-form-control-wrap textarea {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  width: 100%;
+  min-height: 45px;
+  border: 1px solid #e3e3e3;
+  background: none; }
+
+.wpcf7-form-control-wrap textarea {
+  padding-top: 10px;
+  resize: none; }
+
+.wpcf7-submit {
+  width: 110px;
+  height: 45px;
+  border: none;
+  text-transform: uppercase;
+  color: #ffffff; }
+
+.contact h2.title {
+  text-transform: uppercase;
+  font: 700 22px "Roboto", sans-serif; }
+  .contact h2.title:after {
+    margin: 10px 0 40px 0;
+    display: block;
+    content: '';
+    width: 30px;
+    height: 2px;
+    background-color: #424242; }
+
 .site-footer {
   width: 100%;
   min-height: 220px;

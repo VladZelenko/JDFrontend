@@ -1,0 +1,35 @@
+.wpcf7-form-control-wrap {
+	input, textarea {
+		margin-bottom: 10px;
+		padding-left: 20px;
+		width: 100%;
+		min-height: 45px;
+		border: 1px solid #e3e3e3;
+		background: none;
+	}
+	textarea {
+		padding-top: 10px;
+		resize: none;
+	}
+}
+.wpcf7-submit {
+	width: 110px;
+	height: 45px;
+	border: none;
+	text-transform: uppercase;
+	color: $additional_color;
+}
+.contact {
+	h2.title {
+		text-transform: uppercase;
+		font: 700 22px $primary_font;
+		&:after {
+			margin: 10px 0 40px 0;
+			display: block;
+			content: '';
+			width: 30px;
+			height: 2px;
+			background-color: #424242;
+		}
+	}
+}

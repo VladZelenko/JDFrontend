@@ -288,9 +288,21 @@ function jdfrontend_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'contact_title',
 		array(
-			'label'    => __( 'Title', 'jdfrontend' ),
+			'label'    => __( 'Contact info title', 'jdfrontend' ),
 			'section'  => 'contact_section',
 			'settings' => 'contact_title',
+			'type'     => 'textarea',
+			));
+	//Title 1  - end
+
+	//Title 1
+	$wp_customize->add_setting('contact_title_2', array( 'default'=> ''));
+	$wp_customize->add_control(
+		'contact_title_2',
+		array(
+			'label'    => __( 'Contact-form title', 'jdfrontend' ),
+			'section'  => 'contact_section',
+			'settings' => 'contact_title_2',
 			'type'     => 'textarea',
 			));
 	//Title 1  - end
@@ -340,7 +352,7 @@ function mytheme_customize_css()
 {
 	?>
 	<style type="text/css">
-		.accent-color {background-color: <?php echo get_theme_mod('accent_color'); ?>;}
+		.accent-color, .wpcf7-submit {background-color: <?php echo get_theme_mod('accent_color'); ?>;}
 		.nav-list li a {color: <?php echo get_theme_mod('header_menu_font'); ?>;}
 		.nav-list li a:hover {color: <?php echo get_theme_mod('menu_font_hover'); ?>;}
 		.top-nav {background-color: <?php echo get_theme_mod('bg_menu'); ?>;}
