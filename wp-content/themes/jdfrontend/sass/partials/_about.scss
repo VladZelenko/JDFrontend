@@ -17,3 +17,12 @@
 		margin-bottom: 95px;
 	}
 }
+.education {
+	text-align: center;
+	.title {
+		margin-bottom: 25px;
+		font: 400 16px $primary_font;
+		text-transform: uppercase;
+	}
+	p {font: 400 16px/20px $primary_font;}
+}
