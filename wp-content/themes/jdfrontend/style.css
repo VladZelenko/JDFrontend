@@ -8437,6 +8437,22 @@ button.close {
   .header-sidebar .header-title {
     font: 300 14px "Roboto", sans-serif; }
 
+.about-me {
+  text-align: center; }
+  .about-me .title {
+    font: 700 22px "Roboto", sans-serif;
+    text-transform: uppercase; }
+    .about-me .title:after {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 3px;
+      background-color: #999999;
+      margin: 15px auto 30px auto; }
+  .about-me p {
+    font: 300 14px/24px "Roboto", sans-serif;
+    margin-bottom: 95px; }
+
 .brief-info {
   margin-bottom: 100px; }
   .brief-info .contact-contentbox {

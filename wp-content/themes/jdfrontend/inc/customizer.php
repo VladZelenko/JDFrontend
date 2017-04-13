@@ -187,6 +187,26 @@ function jdfrontend_customize_register( $wp_customize ) {
 		'priority'	 => 9,
 		)));
 	//Logotype font color hover - end
+
+	//title color
+	$wp_customize->add_setting('title_font_color', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'title_font_color', array(
+		'label'      => __( 'Title font color', 'jdfrontend' ),
+		'section'    => 'colors',
+		'settings'   => 'title_font_color',
+		'priority'	 => 3,
+		)));
+	//title color - end
+
+	//paragraph color
+	$wp_customize->add_setting('p_font_color', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'p_font_color', array(
+		'label'      => __( 'Paragraph font color', 'jdfrontend' ),
+		'section'    => 'colors',
+		'settings'   => 'p_font_color',
+		'priority'	 => 3,
+		)));
+	//paragraph color - end
 	//
 	//
 	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -243,6 +263,8 @@ function mytheme_customize_css()
 		.contacts-section {background-color: <?php echo get_theme_mod('contacts_bg'); ?>;}
 		.header-sidebar {background-color: <?php echo get_theme_mod('bg_header_sidebar'); ?>;}
 		.logo-part-1 {background-color: <?php echo get_theme_mod('bg_logotype'); ?>;}
+		.title {color: <?php echo get_theme_mod('title_font_color'); ?>;}
+		p {color: <?php echo get_theme_mod('p_font_color'); ?>;}
 	</style>
 	<?php
 }

@@ -26,7 +26,7 @@ get_header(); ?>
 					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 						<div class="col-sm-12 col-md-12 col-lg-12">
 							<?php the_post_thumbnail(); ?>
-							<?php the_title(); ?>
+							<h2 class="title"><?php the_title(); ?></h2>
 							<?php the_content(); ?>
 						</div>
 					<?php endwhile; ?>
@@ -44,7 +44,7 @@ get_header(); ?>
 			<div class="row">
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 					<div class="col-sm-12 col-md-6 col-lg-4">
-						<?php the_title(); ?>
+						<h3 class="title"><?php the_title(); ?></h3>
 						<?php the_content(); ?>
 					</div>
 				<?php endwhile; ?>

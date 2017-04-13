@@ -1,0 +1,19 @@
+.about-me {
+	text-align: center;
+	.title {
+		font: 700 22px $primary_font;
+		text-transform: uppercase;
+		&:after {
+			content: '';
+			display: block;
+			width: 30px;
+			height: 3px;
+			background-color: #999999;
+			margin: 15px auto 30px auto;
+		}
+	}
+	p {
+		font: 300 14px/24px $primary_font;
+		margin-bottom: 95px;
+	}
+}
