@@ -8459,6 +8459,7 @@ button.close {
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5; }
   .post footer .author {
+    padding-left: 10px;
     font: 300 14px/24px "Roboto", sans-serif; }
 
 .posts-navigation .screen-reader-text {
@@ -8573,19 +8574,24 @@ button.close {
 .contact-info ul li {
   margin-bottom: 10px; }
 
-.widget {
+.widget .widget-title {
+  padding: 20px 0;
+  margin-top: 0;
+  font: 400 18px "Roboto", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 1px solid #c2c2c2;
+  border-top: 1px solid #c2c2c2; }
+
+.widget ul li {
+  padding: 15px 0;
+  border-bottom: 1px solid #e5e5e5; }
+
+.widget a:hover, .widget a:focus {
+  text-decoration: none; }
+
+.widget-area .widget {
   margin-bottom: 30px; }
-  .widget .widget-title {
-    padding: 20px 0;
-    margin-top: 0;
-    font: 400 18px "Roboto", sans-serif;
-    text-transform: uppercase;
-    text-align: center;
-    border-bottom: 1px solid #c2c2c2;
-    border-top: 1px solid #c2c2c2; }
-  .widget ul li {
-    padding: 15px 0;
-    border-bottom: 1px solid #e5e5e5; }
 
 .site-footer {
   width: 100%;

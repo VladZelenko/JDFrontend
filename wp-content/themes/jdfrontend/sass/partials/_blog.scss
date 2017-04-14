@@ -15,7 +15,10 @@
 		margin-bottom: 60px;
 		border-top: 1px solid #e5e5e5;
 		border-bottom: 1px solid #e5e5e5;
-		.author {font: 300 14px/24px $primary_font;}
+		.author {
+			padding-left: 10px;
+			font: 300 14px/24px $primary_font;
+		}
 	}
 }
 .posts-navigation {
