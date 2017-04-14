@@ -1,0 +1,16 @@
+.widget {
+	margin-bottom: 30px;
+	.widget-title {
+		padding: 20px 0;
+		margin-top: 0;
+		font: 400 18px $primary_font;
+		text-transform: uppercase;
+		text-align: center;
+		border-bottom: 1px solid #c2c2c2;
+		border-top: 1px solid #c2c2c2;
+	}
+	ul li {
+		padding: 15px 0;
+		border-bottom: 1px solid #e5e5e5;
+	}
+}
