@@ -8441,6 +8441,26 @@ button.close {
   font: 400 18px "Roboto", sans-serif;
   text-transform: uppercase; }
 
+.post .post-info li {
+  display: inline-block; }
+  .post .post-info li .fa {
+    margin-right: 15px; }
+  .post .post-info li .date {
+    margin-right: 10px; }
+  .post .post-info li a {
+    text-transform: uppercase; }
+
+.post p {
+  font: 300 14px/24px "Roboto", sans-serif; }
+
+.post footer {
+  padding: 15px 0;
+  margin-bottom: 60px;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5; }
+  .post footer .author {
+    font: 300 14px/24px "Roboto", sans-serif; }
+
 .about-me, .skills, .education {
   text-align: center; }
   .about-me h2.title, .skills h2.title, .education h2.title {

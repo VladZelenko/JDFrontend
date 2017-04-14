@@ -3,4 +3,18 @@
 		font: 400 18px $primary_font;
 		text-transform: uppercase;
 	}
+	.post-info li{
+		display: inline-block;
+		.fa {margin-right: 15px;}
+		.date {margin-right: 10px;}
+		a {text-transform: uppercase;}
+	}
+	p {font: 300 14px/24px $primary_font;}
+	footer {
+		padding: 15px 0;
+		margin-bottom: 60px;
+		border-top: 1px solid #e5e5e5;
+		border-bottom: 1px solid #e5e5e5;
+		.author {font: 300 14px/24px $primary_font;}
+	}
 }

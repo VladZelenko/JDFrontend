@@ -342,7 +342,7 @@ function jdfrontend_customize_register( $wp_customize ) {
 	//info font color - end
 
 	//Icon font-size
-		$wp_customize->add_setting('icon_font_size', array( 'default'=> ''));
+	$wp_customize->add_setting('icon_font_size', array( 'default'=> ''));
 	$wp_customize->add_control(
 		'icon_font_size',
 		array(
@@ -361,6 +361,36 @@ function jdfrontend_customize_register( $wp_customize ) {
 		'settings'   => 'info_color',
 		)));
 	//Info font color - end
+	//
+	//
+	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	//+++++++++++++++++++++++++++++++++++++++++BLOG PAGE++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	//
+	//
+	$wp_customize->add_section( 'blog_section' , array(
+		'title'      => __( 'Blog page', 'jdfrontend' ),
+		'priority'   => 1,
+		));
+
+	//Post info font color
+	$wp_customize->add_setting('post_info', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'post_info', array(
+		'label'      => __( 'Post info color', 'jdfrontend' ),
+		'section'    => 'blog_section',
+		'settings'   => 'post_info',
+		)));
+	//Post info font color - end
+
+
+	//Post info author font color
+	$wp_customize->add_setting('post_info_author', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'post_info_author', array(
+		'label'      => __( 'Post author color', 'jdfrontend' ),
+		'section'    => 'blog_section',
+		'settings'   => 'post_info_author',
+		)));
+	//Post info author font color - end
 	//
 	//
 	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -388,11 +418,13 @@ function mytheme_customize_css()
 		.logo-part-1 {background-color: <?php echo get_theme_mod('bg_logotype'); ?>;}
 		.title {color: <?php echo get_theme_mod('title_font_color'); ?>;}
 		p {color: <?php echo get_theme_mod('p_font_color'); ?>;}
-		.contact .contact-info .fa {
+		.contact .contact-info .fa, .post .post-info .fa {
 			color: <?php echo get_theme_mod('icon_color'); ?>;
 			font-size: <?php echo get_theme_mod('icon_font_size') . 'px'; ?>;
 		}
 		.contact .contact-info a {color: <?php echo get_theme_mod('info_color'); ?>;}
+		.post .post-info a, .post .post-info li {color: <?php echo get_theme_mod('post_info'); ?>;}
+		.post .author {color: <?php echo get_theme_mod('post_info_author'); ?>;}
 	</style>
 	<?php
 }

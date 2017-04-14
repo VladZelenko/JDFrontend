@@ -24,6 +24,7 @@
 		</header>
 		<?php the_excerpt(); ?>
 		<footer>
+			<span class="author"><?php the_author(); ?></span>
 		</footer>
 	</article>
 </div>
