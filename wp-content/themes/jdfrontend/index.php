@@ -39,30 +39,22 @@ get_header(); ?>
 
 				endif; ?>
 				<?php
-				the_posts_pagination(
-					$args = array(
-						'show_all'     => false,
-						'end_size'     => 1,
-						'mid_size'     => 1,
-						'prev_next'    => false,
-						'prev_text'    => __(' '),
-						'next_text'    => __(' '),
-						'add_args'     => false,
-						'add_fragment' => '',
-						'screen_reader_text' => __( ' ' ),
-						));
-						?>
-					</div>
-					<div class="col-sm-12 col-md-3 col-lg-3">
-						<?php get_sidebar(); ?>
-					</div>
-
+				the_posts_navigation( array(
+					'prev_text'          => 'Предыдущие записи',
+					'next_text'          => 'Следующие записи',
+					'screen_reader_text' => ' ',
+					)); ?>
 				</div>
+				<div class="col-sm-12 col-md-3 col-lg-3">
+					<?php get_sidebar(); ?>
+				</div>
+
 			</div>
+		</div>
 
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</main><!-- #main -->
+</div><!-- #primary -->
 
-	<?php
-	get_footer();
+<?php
+get_footer();

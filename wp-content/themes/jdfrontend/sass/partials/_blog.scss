@@ -18,3 +18,11 @@
 		.author {font: 300 14px/24px $primary_font;}
 	}
 }
+.posts-navigation {
+	.screen-reader-text {display: none;}
+	.nav-links {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
+}

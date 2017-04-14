@@ -8461,6 +8461,24 @@ button.close {
   .post footer .author {
     font: 300 14px/24px "Roboto", sans-serif; }
 
+.posts-navigation .screen-reader-text {
+  display: none; }
+
+.posts-navigation .nav-links {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
 .about-me, .skills, .education {
   text-align: center; }
   .about-me h2.title, .skills h2.title, .education h2.title {
