@@ -371,6 +371,7 @@ function mytheme_customize_css()
 {
 	?>
 	<style type="text/css">
+		.post .title a {color: <?php echo get_theme_mod('title_font_color'); ?>;}
 		.accent-color, .wpcf7-submit {background-color: <?php echo get_theme_mod('accent_color'); ?>;}
 		.nav-list li a {color: <?php echo get_theme_mod('header_menu_font'); ?>;}
 		.nav-list li a:hover {color: <?php echo get_theme_mod('menu_font_hover'); ?>;}

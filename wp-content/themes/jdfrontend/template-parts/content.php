@@ -13,10 +13,17 @@
 		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
 		<header>
 			<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+			<ul class="post-info">
+				<li>
+					<a href="<?php get_posts(); ?>" class="date"><i class="fa fa-calendar" aria-hidden="true"></i><?php the_time('F j Y'); ?></a>
+				</li>
+				<li>
+					<i class="fa fa-clock-o" aria-hidden="true"></i><?php the_time('G:i'); ?>
+				</li>
+			</ul>
 		</header>
 		<?php the_excerpt(); ?>
 		<footer>
-			<a href="<?php get_posts(); ?>" class="date"><i class="fa fa-clock-o" aria-hidden="true"></i><?php the_time('F j Y'); ?></a>
 		</footer>
 	</article>
 </div>

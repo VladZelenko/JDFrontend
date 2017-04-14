@@ -236,6 +236,10 @@ function skills_post_type() {
     register_post_type( 'skills', $args );
 }
 add_action( 'init', 'skills_post_type' );
+
+add_filter('excerpt_more', function($more) {
+    return '';
+});
 /**
  * Enqueue scripts and styles.
  */

@@ -8437,6 +8437,10 @@ button.close {
   .header-sidebar .header-title {
     font: 300 14px "Roboto", sans-serif; }
 
+.post .title {
+  font: 400 18px "Roboto", sans-serif;
+  text-transform: uppercase; }
+
 .about-me, .skills, .education {
   text-align: center; }
   .about-me h2.title, .skills h2.title, .education h2.title {
