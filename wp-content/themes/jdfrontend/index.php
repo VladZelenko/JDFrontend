@@ -33,23 +33,36 @@ get_header(); ?>
 
 				endwhile;
 
-				the_posts_navigation();
-
 				else :
 
 					get_template_part( 'template-parts/content', 'none' );
 
 				endif; ?>
+				<?php
+				the_posts_pagination(
+					$args = array(
+						'show_all'     => false,
+						'end_size'     => 1,
+						'mid_size'     => 1,
+						'prev_next'    => false,
+						'prev_text'    => __(' '),
+						'next_text'    => __(' '),
+						'add_args'     => false,
+						'add_fragment' => '',
+						'screen_reader_text' => __( ' ' ),
+						));
+						?>
+					</div>
+					<div class="col-sm-12 col-md-3 col-lg-3">
+						<?php get_sidebar(); ?>
+					</div>
+
+				</div>
 			</div>
-			<div class="col-sm-12 col-md-3 col-lg-3">
-				<?php get_sidebar(); ?>
-			</div>
-		</div>
-	</div>
 
 
-</main><!-- #main -->
-</div><!-- #primary -->
+		</main><!-- #main -->
+	</div><!-- #primary -->
 
-<?php
-get_footer();
+	<?php
+	get_footer();
