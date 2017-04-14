@@ -143,6 +143,15 @@ function jdfrontend_customize_register( $wp_customize ) {
 		)));
 	//widget links font color - end
 
+	//pagination font color
+	$wp_customize->add_setting('pagination_color', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'pagination_color', array(
+		'label'      => __( 'Pagination font color', 'jdfrontend' ),
+		'section'    => 'colors',
+		'settings'   => 'pagination_color',
+		)));
+	//pagination font color - end
+
 	//header title
 	$wp_customize->add_setting('head_title', array( 'default'=> ''));
 	$wp_customize->add_control(
@@ -453,6 +462,7 @@ function mytheme_customize_css()
 		.widget .widget-title {color: <?php echo get_theme_mod('widgets_title_color'); ?>;}
 		.widget a {color: <?php echo get_theme_mod('widgets_link_color'); ?>;}
 		.post .author {color: <?php echo get_theme_mod('post_info_author'); ?>;}
+		.posts-navigation .nav-links a {color: <?php echo get_theme_mod('pagination_color'); ?>;}
 		.post {background-color: <?php echo get_theme_mod('post_background'); ?>;}
 	</style>
 	<?php

@@ -40,8 +40,8 @@ get_header(); ?>
 				endif; ?>
 				<?php
 				the_posts_navigation( array(
-					'prev_text'          => 'Предыдущие записи',
-					'next_text'          => 'Следующие записи',
+					'next_text'          => 'Назад',
+					'prev_text'          => 'Вперед',
 					'screen_reader_text' => ' ',
 					)); ?>
 				</div>

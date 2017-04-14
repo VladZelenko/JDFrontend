@@ -22,7 +22,8 @@
 	.screen-reader-text {display: none;}
 	.nav-links {
 		display: flex;
-		flex-flow: row wrap;
+		flex-flow: row-reverse wrap;
 		justify-content: space-between;
 	}
+	a {font: 400 16px $primary_font;}
 }
