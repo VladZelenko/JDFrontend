@@ -125,6 +125,24 @@ function jdfrontend_customize_register( $wp_customize ) {
 		)));
 	//accent color - end
 
+	//widget title font color
+	$wp_customize->add_setting('widgets_title_color', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'widgets_title_color', array(
+		'label'      => __( 'Widgets title font color', 'jdfrontend' ),
+		'section'    => 'colors',
+		'settings'   => 'widgets_title_color',
+		)));
+	//widget title font color - end
+
+	//widget links font color
+	$wp_customize->add_setting('widgets_link_color', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'widgets_link_color', array(
+		'label'      => __( 'Widgets links font color', 'jdfrontend' ),
+		'section'    => 'colors',
+		'settings'   => 'widgets_link_color',
+		)));
+	//widget links font color - end
+
 	//header title
 	$wp_customize->add_setting('head_title', array( 'default'=> ''));
 	$wp_customize->add_control(
@@ -432,6 +450,8 @@ function mytheme_customize_css()
 		}
 		.contact .contact-info a {color: <?php echo get_theme_mod('info_color'); ?>;}
 		.post .post-info a, .post .post-info li {color: <?php echo get_theme_mod('post_info'); ?>;}
+		.widget .widget-title {color: <?php echo get_theme_mod('widgets_title_color'); ?>;}
+		.widget a {color: <?php echo get_theme_mod('widgets_link_color'); ?>;}
 		.post .author {color: <?php echo get_theme_mod('post_info_author'); ?>;}
 		.post {background-color: <?php echo get_theme_mod('post_background'); ?>;}
 	</style>
