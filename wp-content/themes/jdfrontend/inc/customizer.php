@@ -187,26 +187,6 @@ function jdfrontend_customize_register( $wp_customize ) {
 		'priority'	 => 9,
 		)));
 	//Logotype font color hover - end
-
-	//title color
-	$wp_customize->add_setting('title_font_color', array( 'default'=> ''));
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'title_font_color', array(
-		'label'      => __( 'Title font color', 'jdfrontend' ),
-		'section'    => 'colors',
-		'settings'   => 'title_font_color',
-		'priority'	 => 3,
-		)));
-	//title color - end
-
-	//paragraph color
-	$wp_customize->add_setting('p_font_color', array( 'default'=> ''));
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'p_font_color', array(
-		'label'      => __( 'Paragraph font color', 'jdfrontend' ),
-		'section'    => 'colors',
-		'settings'   => 'p_font_color',
-		'priority'	 => 3,
-		)));
-	//paragraph color - end
 	//
 	//
 	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -391,6 +371,34 @@ function jdfrontend_customize_register( $wp_customize ) {
 		'settings'   => 'post_info_author',
 		)));
 	//Post info author font color - end
+
+	//Post background color
+	$wp_customize->add_setting('post_background', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'post_background', array(
+		'label'      => __( 'Post background-color', 'jdfrontend' ),
+		'section'    => 'blog_section',
+		'settings'   => 'post_background',
+		)));
+	//Post background color - end
+
+
+	//title color
+	$wp_customize->add_setting('title_font_color', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'title_font_color', array(
+		'label'      => __( 'Title font color', 'jdfrontend' ),
+		'section'    => 'blog_section',
+		'settings'   => 'title_font_color',
+		)));
+	//title color - end
+
+	//paragraph color
+	$wp_customize->add_setting('p_font_color', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'p_font_color', array(
+		'label'      => __( 'Paragraph font color', 'jdfrontend' ),
+		'section'    => 'blog_section',
+		'settings'   => 'p_font_color',
+		)));
+	//paragraph color - end
 	//
 	//
 	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -425,6 +433,7 @@ function mytheme_customize_css()
 		.contact .contact-info a {color: <?php echo get_theme_mod('info_color'); ?>;}
 		.post .post-info a, .post .post-info li {color: <?php echo get_theme_mod('post_info'); ?>;}
 		.post .author {color: <?php echo get_theme_mod('post_info_author'); ?>;}
+		.post {background-color: <?php echo get_theme_mod('post_background'); ?>;}
 	</style>
 	<?php
 }
