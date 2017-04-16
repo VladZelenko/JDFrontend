@@ -16,6 +16,9 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-9 col-lg-9">
 					<?php
 					if ( have_posts() ) : ?>
 
@@ -41,7 +44,13 @@ get_header(); ?>
 					'prev_text'          => 'Вперед',
 					'screen_reader_text' => ' ',
 					)); ?>
+				</div>
+				<div class="col-sm-12 col-md-3 col-lg-3">
+					<?php get_sidebar(); ?>
+				</div>
 
+			</div>
+		</div>
 
 
 	</main><!-- #main -->
