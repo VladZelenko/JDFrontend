@@ -9,22 +9,32 @@
 
 ?>
 <div class="blog-post">
-	<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
-		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-		<header>
-			<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-			<ul class="post-info">
-				<li>
-					<a href="<?php get_posts(); ?>" class="date"><i class="fa fa-calendar" aria-hidden="true"></i><?php the_time('F j Y'); ?></a>
-				</li>
-				<li>
-					<i class="fa fa-clock-o" aria-hidden="true"></i><?php the_time('G:i'); ?>
-				</li>
-			</ul>
-		</header>
-		<?php the_excerpt(); ?>
-		<footer>
-			<span class="author"><?php the_author(); ?></span>
-		</footer>
-	</article>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9">
+				<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
+					<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+					<header>
+						<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+						<ul class="post-info">
+							<li>
+								<a href="<?php get_posts(); ?>" class="date"><i class="fa fa-calendar" aria-hidden="true"></i><?php the_time('F j Y'); ?></a>
+							</li>
+							<li>
+								<i class="fa fa-clock-o" aria-hidden="true"></i><?php the_time('G:i'); ?>
+							</li>
+						</ul>
+					</header>
+					<?php the_excerpt(); ?>
+					<footer>
+						<span class="author"><?php the_author(); ?></span>
+					</footer>
+				</article>
+
+			</div>
+			<div class="col-sm-12 col-md-3 col-lg-3">
+				<?php get_sidebar(); ?>
+			</div>
+		</div>
+	</div>
 </div>
