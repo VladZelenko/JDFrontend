@@ -429,6 +429,42 @@ function jdfrontend_customize_register( $wp_customize ) {
 	//
 	//
 	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+	//+++++++++++++++++++++++++++++++++++++++++ABOUT PAGE+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	//
+	//
+	//Blockquote font color
+	$wp_customize->add_setting('blockqoute_font_color', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'blockqoute_font_color', array(
+		'label'      => __( 'Blockquote font color', 'jdfrontend' ),
+		'section'    => 'blog_section',
+		'settings'   => 'blockqoute_font_color',
+		)));
+	//Blockquote font color - end
+
+	//Blockquote background-color
+	$wp_customize->add_setting('blockuote_bg_color', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'blockuote_bg_color', array(
+		'label'      => __( 'Blockquote background-color', 'jdfrontend' ),
+		'section'    => 'blog_section',
+		'settings'   => 'blockuote_bg_color',
+		)));
+	//Blockquote background-color - end
+
+	//Blockquote border-left-color
+	$wp_customize->add_setting('blockuote_border_color', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'blockuote_border_color', array(
+		'label'      => __( 'Blockquote border-color', 'jdfrontend' ),
+		'section'    => 'blog_section',
+		'settings'   => 'blockuote_border_color',
+		)));
+	//Blockquote border-left-color - end
+	//
+	//
+	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 }
 add_action( 'customize_register', 'jdfrontend_customize_register' );
 
@@ -464,6 +500,11 @@ function mytheme_customize_css()
 		.post .author {color: <?php echo get_theme_mod('post_info_author'); ?>;}
 		.posts-navigation .nav-links a {color: <?php echo get_theme_mod('pagination_color'); ?>;}
 		.post {background-color: <?php echo get_theme_mod('post_background'); ?>;}
+		.blog-post blockquote, .blog-post blockquote p {
+			color: <?php echo get_theme_mod('blockqoute_font_color'); ?>;
+			background-color: <?php echo get_theme_mod('blockuote_bg_color'); ?>;
+			border-left-color: <?php echo get_theme_mod('blockuote_border_color'); ?>;
+		}
 	</style>
 	<?php
 }

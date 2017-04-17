@@ -8593,6 +8593,9 @@ button.close {
 .widget-area .widget {
   margin-bottom: 30px; }
 
+.blog-post blockquote {
+  margin-left: 10px; }
+
 .site-footer {
   width: 100%;
   min-height: 220px;
