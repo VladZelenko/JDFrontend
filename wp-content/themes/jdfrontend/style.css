@@ -8533,6 +8533,35 @@ button.close {
   display: block;
   margin-bottom: 30px; }
 
+.posrtfolio-list .portfolio-item {
+  margin-bottom: 30px; }
+
+.posrtfolio-list .img-box {
+  position: relative;
+  overflow: hidden; }
+  .posrtfolio-list .img-box:hover .overlay {
+    opacity: 1;
+    top: 0;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1); }
+
+.posrtfolio-list .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  text-align: center;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  opacity: 0; }
+
 .wpcf7-form-control-wrap input, .wpcf7-form-control-wrap textarea {
   margin-bottom: 10px;
   padding-left: 20px;
@@ -8634,6 +8663,17 @@ button.close {
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
     text-decoration: none; }
+
+.post-commets li {
+  margin-bottom: 20px; }
+
+.post-commets input, .post-commets textarea {
+  padding-left: 20px;
+  width: 500px;
+  height: 50px;
+  background: none;
+  border: 1px solid #e3e3e3;
+  resize: none; }
 
 #searchform input {
   width: 260px;

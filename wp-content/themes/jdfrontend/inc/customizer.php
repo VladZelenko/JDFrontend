@@ -231,7 +231,6 @@ function jdfrontend_customize_register( $wp_customize ) {
 		'label'      => __( 'Background-color', 'jdfrontend' ),
 		'section'    => 'home_contacts',
 		'settings'   => 'contacts_bg',
-		'priority'	 => 1,
 		)));
 	//Background contacts section on home page - end
 	//
@@ -474,8 +473,8 @@ function mytheme_customize_css()
 	<style type="text/css">
 		.post .title a {color: <?php echo get_theme_mod('title_font_color'); ?>;}
 		.accent-color, .wpcf7-submit {background-color: <?php echo get_theme_mod('accent_color'); ?>;}
-		.nav-list li a {color: <?php echo get_theme_mod('header_menu_font'); ?>;}
-		.nav-list li a:hover {color: <?php echo get_theme_mod('menu_font_hover'); ?>;}
+		.nav-list li a, .contact-btn {color: <?php echo get_theme_mod('header_menu_font'); ?>;}
+		.nav-list li a:hover, .contact-btn:hover {color: <?php echo get_theme_mod('menu_font_hover'); ?>;}
 		.top-nav {background-color: <?php echo get_theme_mod('bg_menu'); ?>;}
 		.headbox-menu {background-color: <?php echo get_theme_mod('bg_header'); ?>;}
 		.site-footer {background-color: <?php echo get_theme_mod('bg_footer'); ?>;}
