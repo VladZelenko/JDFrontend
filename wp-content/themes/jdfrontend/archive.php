@@ -8,23 +8,27 @@
  */
 
 get_header(); ?>
+<div class="container">
+	<div class="row">
+		
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<div class="col-md-9">
+			<div id="primary" class="content-area">
+				<main id="main" class="site-main" role="main">
 
-		<?php
-		if ( have_posts() ) : ?>
+					<?php
+					if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+					<header class="page-header">
+						<?php
+						the_archive_title( '<h1 class="page-title">', '</h1>' );
+						the_archive_description( '<div class="archive-description">', '</div>' );
+						?>
+					</header><!-- .page-header -->
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+					<?php
+					/* Start the Loop */
+					while ( have_posts() ) : the_post();
 
 				/*
 				 * Include the Post-Format-specific template for the content.
@@ -33,19 +37,25 @@ get_header(); ?>
 				 */
 				get_template_part( 'template-parts/content', get_post_format() );
 
-			endwhile;
+				endwhile;
 
-			the_posts_navigation();
+				the_posts_navigation();
 
-		else :
+				else :
 
-			get_template_part( 'template-parts/content', 'none' );
+					get_template_part( 'template-parts/content', 'none' );
 
-		endif; ?>
+				endif; ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
+			</main><!-- #main -->
+		</div><!-- #primary -->
+	</div>
+	<div class="col-md-3">
+		<?php
+		get_sidebar();
+		?>
+	</div>
+</div>
+</div>
 <?php
-get_sidebar();
 get_footer();
