@@ -36,7 +36,11 @@ get_header(); ?>
 
 				endwhile;
 
-				the_posts_navigation();
+				the_posts_navigation( array(
+					'next_text'          => 'Назад',
+					'prev_text'          => 'Вперед',
+					'screen_reader_text' => ' ',
+					));
 
 				else :
 
