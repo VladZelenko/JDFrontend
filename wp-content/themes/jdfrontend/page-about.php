@@ -44,7 +44,7 @@ get_header(); ?>
 			<div class="row">
 			<h2 class="title"><?php echo get_theme_mod('head_title_1'); ?></h2>
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-					<div class="col-sm-12 col-md-6 col-lg-4">
+					<div class="col-sm-12 col-md-4 col-lg-4">
 						<h3 class="title"><?php the_title(); ?></h3>
 						<?php the_content(); ?>
 					</div>
@@ -63,7 +63,7 @@ if ($query->have_posts()):?>
 		<div class="row">
 		<h2 class="title"><?php echo get_theme_mod('head_title_2'); ?></h2>
 			<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-				<div class="col-sm-12 col-md-4 col-lg-3 skillbox">
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 skillbox">
 					<?php the_post_thumbnail(); ?>
 				</div>
 			<?php endwhile; ?>

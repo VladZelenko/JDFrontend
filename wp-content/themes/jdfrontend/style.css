@@ -8435,6 +8435,7 @@ button.close {
         -ms-flex-align: center;
             align-items: center; }
   .header-sidebar .header-title {
+    margin-top: 15px;
     font: 300 14px "Roboto", sans-serif; }
 
 .post .title {
@@ -8745,3 +8746,32 @@ button.close {
       background: #000; }
     #open-btn-nav .line:nth-child(2) {
       margin: 3px 0; } }
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .contacts-section .contact-contentbox, .contacts-section .contact-imgbox, .contacts-section .button-box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; } }
+
+@media only screen and (min-width: 320px) and (max-width: 340px) {
+  .header-sidebar #searchform input {
+    width: 240px; } }
+
+@media only screen and (min-width: 320px) and (max-width: 990px) {
+  .header-sidebar {
+    text-align: center; }
+    .header-sidebar .flexbox {
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }

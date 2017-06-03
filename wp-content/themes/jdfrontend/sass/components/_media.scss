@@ -55,3 +55,29 @@
 		.line:nth-child(2) {margin: 3px 0;}
 	}
 }
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+	.contacts-section {
+		.contact-contentbox, .contact-imgbox, .button-box {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: center;
+		}
+	}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 340px) {
+	.header-sidebar {
+		#searchform input {
+			width: 240px;
+		}
+	}
+}
+@media only screen and (min-width: 320px) and (max-width: 990px) {
+	.header-sidebar {
+		text-align: center;
+		.flexbox {
+			justify-content: center;
+		}
+	}
+}

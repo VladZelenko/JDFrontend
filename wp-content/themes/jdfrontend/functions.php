@@ -135,110 +135,110 @@ register_sidebar( array(
 
 //Page home - contact
 function contacts_post_type() {
-    $args = array(
-      'label' => 'Home contact',
-      'public' => true,
-      'show_ui' => true,
-      'capability_type' => 'post',
-      'hierarchical' => false,
-      'rewrite' => array('slug' => 'home-contact'),
-      'query_var' => true,
-      'supports' => array(
-        'title',
-        'editor',
-        'excerpt',
-        'trackbacks',
-        'custom-fields',
-        'comments',
-        'revisions',
-        'thumbnail',
-        'author',
-        'page-attributes',)
-    );
-    register_post_type( 'home-contact', $args );
+	$args = array(
+		'label' => 'Home contact',
+		'public' => true,
+		'show_ui' => true,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'rewrite' => array('slug' => 'home-contact'),
+		'query_var' => true,
+		'supports' => array(
+			'title',
+			'editor',
+			'excerpt',
+			'trackbacks',
+			'custom-fields',
+			'comments',
+			'revisions',
+			'thumbnail',
+			'author',
+			'page-attributes',)
+		);
+	register_post_type( 'home-contact', $args );
 }
 add_action( 'init', 'contacts_post_type' );
 
 //about me
 function about_post_type() {
-    $args = array(
-      'label' => 'About me',
-      'public' => true,
-      'show_ui' => true,
-      'capability_type' => 'post',
-      'hierarchical' => false,
-      'rewrite' => array('slug' => 'about-me'),
-      'query_var' => true,
-      'supports' => array(
-        'title',
-        'editor',
-        'excerpt',
-        'trackbacks',
-        'custom-fields',
-        'comments',
-        'revisions',
-        'thumbnail',
-        'author',
-        'page-attributes',)
-    );
-    register_post_type( 'about-me', $args );
+	$args = array(
+		'label' => 'About me',
+		'public' => true,
+		'show_ui' => true,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'rewrite' => array('slug' => 'about-me'),
+		'query_var' => true,
+		'supports' => array(
+			'title',
+			'editor',
+			'excerpt',
+			'trackbacks',
+			'custom-fields',
+			'comments',
+			'revisions',
+			'thumbnail',
+			'author',
+			'page-attributes',)
+		);
+	register_post_type( 'about-me', $args );
 }
 add_action( 'init', 'about_post_type' );
 
 //My education - about page
 function education_post_type() {
-    $args = array(
-      'label' => 'My education',
-      'public' => true,
-      'show_ui' => true,
-      'capability_type' => 'post',
-      'hierarchical' => false,
-      'rewrite' => array('slug' => 'education'),
-      'query_var' => true,
-      'supports' => array(
-        'title',
-        'editor',
-        'excerpt',
-        'trackbacks',
-        'custom-fields',
-        'comments',
-        'revisions',
-        'thumbnail',
-        'author',
-        'page-attributes',)
-    );
-    register_post_type( 'education', $args );
+	$args = array(
+		'label' => 'My education',
+		'public' => true,
+		'show_ui' => true,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'rewrite' => array('slug' => 'education'),
+		'query_var' => true,
+		'supports' => array(
+			'title',
+			'editor',
+			'excerpt',
+			'trackbacks',
+			'custom-fields',
+			'comments',
+			'revisions',
+			'thumbnail',
+			'author',
+			'page-attributes',)
+		);
+	register_post_type( 'education', $args );
 }
 add_action( 'init', 'education_post_type' );
 
 //My skills custom post type on abaut page
 function skills_post_type() {
-    $args = array(
-      'label' => 'My skills',
-      'public' => true,
-      'show_ui' => true,
-      'capability_type' => 'post',
-      'hierarchical' => false,
-      'rewrite' => array('slug' => 'skills'),
-      'query_var' => true,
-      'supports' => array(
-        'title',
-        'editor',
-        'excerpt',
-        'trackbacks',
-        'custom-fields',
-        'comments',
-        'revisions',
-        'thumbnail',
-        'author',
-        'page-attributes',)
-    );
-    register_post_type( 'skills', $args );
+	$args = array(
+		'label' => 'My skills',
+		'public' => true,
+		'show_ui' => true,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'rewrite' => array('slug' => 'skills'),
+		'query_var' => true,
+		'supports' => array(
+			'title',
+			'editor',
+			'excerpt',
+			'trackbacks',
+			'custom-fields',
+			'comments',
+			'revisions',
+			'thumbnail',
+			'author',
+			'page-attributes',)
+		);
+	register_post_type( 'skills', $args );
 }
 add_action( 'init', 'skills_post_type' );
 
 add_filter('excerpt_more', function($more) {
-    return '';
+	return '';
 });
 /**
  * Enqueue scripts and styles.
@@ -251,12 +251,18 @@ function jdfrontend_scripts() {
 	wp_enqueue_script( 'jdfrontend-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/libs/bootstrap-sass/assets/javascripts/bootstrap.min.js', array(), '20151215', true );
 
+	wp_enqueue_script('cookie', get_template_directory_uri() . '/js/jquery.cookie.js', 'jquery', false);
+	wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js', 'jquery', false);
+	wp_enqueue_script('moreload', get_template_directory_uri() . '/js/moreload.js', 'jquery', false);
+
 	wp_enqueue_script( 'jdfrontend-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 	wp_enqueue_script( 'customjs', get_template_directory_uri() . '/js/custom.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+
 }
 add_action( 'wp_enqueue_scripts', 'jdfrontend_scripts' );
 

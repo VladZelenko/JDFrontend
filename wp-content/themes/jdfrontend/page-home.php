@@ -45,18 +45,15 @@ get_header(); ?>
 			<div class="row">
 
 				<?php
-				$query = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 100));
+				$query = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 30));
 				while($query->have_posts()) : $query->the_post();
 				?>
 				<div class="col-sm-12 col-md-6 col-lg-4 portfolio-item">
 					<div class="img-box">
 						<?php the_post_thumbnail(); ?>
 						<div class="overlay">
-							<h3 class="title">Love Conquers All</h3>
-							<ul>
-								<li><a href="<?php the_permalink(); ?>" class="overlay-btn">1</a></li>
-								<li><a href="#" class="overlay-btn">2</a></li>
-							</ul>
+							<h3 class="title"><?php the_title(); ?></h3>
+							<a href="<?php the_permalink(); ?>" class="overlay-btn">1</a>
 						</div>
 					</div>
 				</div>
