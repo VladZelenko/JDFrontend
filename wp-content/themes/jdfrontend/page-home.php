@@ -24,13 +24,13 @@ get_header(); ?>
 			<div class="container">
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 					<div class="row contacts-section">
-						<div class="col-sm-4 col-md-3 col-lg-3 contact-imgbox">
+						<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 contact-imgbox">
 							<?php the_post_thumbnail(); ?>
 						</div>
-						<div class="col-sm-8 col-md-7 col-lg-7 contact-contentbox">
+						<div class="col-xs-12 col-sm-4 col-md-7 col-lg-7 contact-contentbox">
 							<?php the_content(); ?>
 						</div>
-						<div class="col-sm-12 col-md-2 col-lg-2 button-box">
+						<div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 button-box">
 							<a href="http://jdfrontend/index.php/contact-us/" class="contact-btn accent-color">Contact Me</a>
 						</div>
 					</div>
