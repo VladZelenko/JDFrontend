@@ -23,6 +23,11 @@
 			</ul>
 		</header>
 		<?php the_content(); ?>
+		<?php if ( is_active_sidebar( 'comments-area' ) ) : ?>
+			<div id=f ( $image_src = wp_get_attachment_image_src( $thumbnail_id, 'normal-bg' ) )"primary" role="complementary">
+				<?php dynamic_sidebar( 'comments-area' ); ?>
+			</div>
+		<?php endif; ?>
 		<footer>
 			<span class="author"><?php the_author(); ?></span>
 		</footer>

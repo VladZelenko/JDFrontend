@@ -8536,6 +8536,8 @@ button.close {
 
 .posrtfolio-list .portfolio-item {
   margin-bottom: 30px; }
+  .posrtfolio-list .portfolio-item a:hover {
+    text-decoration: none; }
 
 .posrtfolio-list .img-box {
   position: relative;
@@ -8546,17 +8548,6 @@ button.close {
     -webkit-transform: scale(1);
         -ms-transform: scale(1);
             transform: scale(1); }
-  .posrtfolio-list .img-box .title {
-    margin-left: 20px;
-    color: #ffffff;
-    text-align: left; }
-    .posrtfolio-list .img-box .title:after {
-      margin-top: 10px;
-      content: '';
-      display: block;
-      width: 75px;
-      height: 3px;
-      background: #ffffff; }
   .posrtfolio-list .img-box .overlay-btn {
     margin: 0 20px 20px 0;
     color: #ffffff;
@@ -8566,6 +8557,18 @@ button.close {
     -webkit-align-self: flex-end;
         -ms-flex-item-align: end;
             align-self: flex-end; }
+
+.posrtfolio-list .title {
+  margin-left: 20px;
+  color: #ffffff;
+  text-align: left; }
+  .posrtfolio-list .title:after {
+    margin-top: 10px;
+    content: '';
+    display: block;
+    width: 75px;
+    height: 3px;
+    background: #ffffff; }
 
 .posrtfolio-list .overlay {
   position: absolute;
@@ -8701,17 +8704,6 @@ button.close {
     transition: all .4s ease-in-out;
     text-decoration: none; }
 
-.post-commets li {
-  margin-bottom: 20px; }
-
-.post-commets input, .post-commets textarea {
-  padding-left: 20px;
-  width: 500px;
-  height: 50px;
-  background: none;
-  border: 1px solid #e3e3e3;
-  resize: none; }
-
 #searchform input {
   width: 260px;
   height: 30px;
@@ -8784,20 +8776,22 @@ button.close {
       margin: 3px 0; } }
 
 @media only screen and (min-width: 320px) and (max-width: 768px) {
-  .contacts-section .contact-contentbox, .contacts-section .contact-imgbox, .contacts-section .button-box {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-flow: row nowrap;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center; } }
+  .contacts-section {
+    padding: 30px; }
+    .contacts-section .contact-contentbox, .contacts-section .contact-imgbox, .contacts-section .button-box {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-flow: row nowrap;
+          -ms-flex-flow: row nowrap;
+              flex-flow: row nowrap;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
 
 @media only screen and (min-width: 320px) and (max-width: 340px) {
   .header-sidebar #searchform input {

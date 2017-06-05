@@ -90,20 +90,3 @@ if ( post_password_required() ) {
 	?>
 
 </div><!-- #comments -->
-
-<form action="" class="post-commets">
-	<ul class="post-form-comments">
-		<li>
-			<input type="text" name="name" placeholder="Name">
-		</li>
-		<li>
-			<input type="email" name="mail" placeholder="Email">
-		</li>
-		<li>
-			<textarea name="message" id="" cols="30" rows="10" placeholder="Comment"></textarea>
-		</li>
-		<li>
-			<button>Post comment</button>
-		</li>
-	</ul>
-</form>

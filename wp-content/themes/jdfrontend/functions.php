@@ -133,6 +133,14 @@ register_sidebar( array(
 	'after_title' => '</h3>',
 	) );
 
+register_sidebar( array(
+	'name' => __( 'Post comments widget area', 'jdfrontend' ),
+	'id' => 'comments-area',
+	'description' => __( 'Post comments widget area', 'jdfrontend' ),
+	'before_title' => '<h3>',
+	'after_title' => '</h3>',
+	) );
+
 //Page home - contact
 function contacts_post_type() {
 	$args = array(
