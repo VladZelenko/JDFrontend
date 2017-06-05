@@ -53,7 +53,9 @@ get_header(); ?>
 						<?php the_post_thumbnail(); ?>
 						<div class="overlay">
 							<h3 class="title"><?php the_title(); ?></h3>
-							<a href="<?php the_permalink(); ?>" class="overlay-btn">1</a>
+							<a href="<?php the_permalink(); ?>" class="overlay-btn">
+								<i class="fa fa-chevron-right" aria-hidden="true"></i>
+							</a>
 						</div>
 					</div>
 				</div>
